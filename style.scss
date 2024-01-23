@@ -1,0 +1,50 @@
+@import "partials/mixins";
+@import "partials/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include displayFlex;
+  background-color: $background-color;
+  height: 100vh;
+  font-family: $font-family;
+
+  main {
+    @include displayFlex;
+    background-color: $card-color;
+    width: $mobile-width;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+
+    img {
+      @include roundedImg;
+    }
+
+    h2 {
+      color: $primary-color;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      color: $ternary-color;
+      margin-bottom: 25px;
+      font-size: $font-size;
+    }
+
+    p {
+      font-size: $font-size;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+
+    button {
+      @include button;
+    }
+  }
+}
